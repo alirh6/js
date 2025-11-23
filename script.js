@@ -307,3 +307,5 @@ questions.forEach(function (question) {
 });
 
 alert(`emtiyaze shoma = ${score}`);
+
+const a = []
