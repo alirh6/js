@@ -343,17 +343,28 @@
 // }
 // console.log(eval("ab"));
 
-const h1Elems = document.getElementsByTagName("h1");
-console.log(h1Elems);
+// const h1Elems = document.getElementsByTagName("h1");
+// console.log(h1Elems);
 
-const a = document.getElementById("title");
-console.log(a);
+// const a = document.getElementById("title");
+// console.dir(a);
 
 // const b = document.getElementsByClassName("tit") 
 // console.log(b);
 
-const c = document.querySelector(".tit")
-console.log(c);
-console.log(c);
-console.log(c);
-console.log(c);
+const c = document.querySelectorAll(".tit")
+console.log(c); 
+let i = ""
+let q = c.forEach(function(item){
+  console.log(item);
+  
+})
+
+
+
+const g = document.querySelector(".items")
+g.style.color = "red"
+
+
+let x = document.querySelector(".items")
+x.setAttribute("style.color" , "black")
