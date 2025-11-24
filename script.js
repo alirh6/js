@@ -306,39 +306,51 @@
 //   }
 // });
 
-alert(`emtiyaze shoma = ${score}`);
+// alert(`emtiyaze shoma = ${score}`);
 
-let num1 = +prompt("adad aval");
-let num2 = +prompt("adad dovom");
-let chi = +prompt("chi bsh");
+// let num1 = +prompt("adad aval");
+// let num2 = +prompt("adad dovom");
+// let chi = +prompt("chi bsh");
 
-if (isNaN(num1) || isNaN(num2)) {
-  alert("adad bzn");
-} else {
-  if (chi === "+") {
-    let result = num1 + num2;
-    alert(`majmoe adad shoma =  ${result}`);
-  } else if (chi === "*") {
-    let result = num1 * num2;
-    alert(`zarb adad shoma = ${result}`);
-  }
-}
+// if (isNaN(num1) || isNaN(num2)) {
+//   alert("adad bzn");
+// } else {
+//   if (chi === "+") {
+//     let result = num1 + num2;
+//     alert(`majmoe adad shoma =  ${result}`);
+//   } else if (chi === "*") {
+//     let result = num1 * num2;
+//     alert(`zarb adad shoma = ${result}`);
+//   }
+// }
 
-const text = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
-let captcha = "";
-let random;
-for (let i = 0; i < 50; i++) {
-  random = Math.floor(Math.random() * text.length);
-  captcha += text[random];
-  console.log(random);
-}
-console.log(captcha);
+// const text = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+// let captcha = "";
+// let random;
+// for (let i = 0; i < 50; i++) {
+//   random = Math.floor(Math.random() * text.length);
+//   captcha += text[random];
+//   console.log(random);
+// }
+// console.log(captcha);
 
-let q = prompt(`${captcha}`);
+// let q = prompt(`${captcha}`);
 
-if (q === captcha) {
-  alert("khosh omadi");
-} else {
-  alert("qalate");
-}
-console.log(eval("ab"));
+// if (q === captcha) {
+//   alert("khosh omadi");
+// } else {
+//   alert("qalate");
+// }
+// console.log(eval("ab"));
+
+const h1Elems = document.getElementsByTagName("h1");
+console.log(h1Elems);
+
+const a = document.getElementById("title");
+console.log(a);
+
+// const b = document.getElementsByClassName("tit") 
+// console.log(b);
+
+const c = document.querySelector(".tit")
+console.log(c);
