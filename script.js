@@ -354,3 +354,6 @@ console.log(a);
 
 const c = document.querySelector(".tit")
 console.log(c);
+console.log(c);
+console.log(c);
+console.log(c);
