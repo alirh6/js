@@ -286,26 +286,59 @@
 // }
 //
 
-const questions = [
-  { id: 1, title: "chiye", answer: "ert" },
-  { id: 2, title: "kiye", answer: "fdg" },
-  { id: 3, title: "chetori", answer: "dfg" },
-  { id: 4, title: "kojayi", answer: "ny" },
-  { id: 5, title: "chikar", answer: "hichi" },
-  { id: 6, title: "koshesh", answer: "onja" },
-  { id: 7, title: "are", answer: "na" },
-];
+// const questions = [
+//   { id: 1, title: "chiye", answer: "ert" },
+//   { id: 2, title: "kiye", answer: "fdg" },
+//   { id: 3, title: "chetori", answer: "dfg" },
+//   { id: 4, title: "kojayi", answer: "ny" },
+//   { id: 5, title: "chikar", answer: "hichi" },
+//   { id: 6, title: "koshesh", answer: "onja" },
+//   { id: 7, title: "are", answer: "na" },
+// ];
 
-let score = 0;
-let answer = "";
+// let score = 0;
+// let answer = "";
 
-questions.forEach(function (question) {
-  answer = prompt(`${question.title} ? `);
-  if (answer.toLowerCase() === question.answer) {
-    score++;
-  }
-});
+// questions.forEach(function (question) {
+//   answer = prompt(`${question.title} ? `);
+//   if (answer.toLowerCase() === question.answer) {
+//     score++;
+//   }
+// });
 
 alert(`emtiyaze shoma = ${score}`);
 
-const a = []
+let num1 = +prompt("adad aval");
+let num2 = +prompt("adad dovom");
+let chi = +prompt("chi bsh");
+
+if (isNaN(num1) || isNaN(num2)) {
+  alert("adad bzn");
+} else {
+  if (chi === "+") {
+    let result = num1 + num2;
+    alert(`majmoe adad shoma =  ${result}`);
+  } else if (chi === "*") {
+    let result = num1 * num2;
+    alert(`zarb adad shoma = ${result}`);
+  }
+}
+
+const text = "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+let captcha = "";
+let random;
+for (let i = 0; i < 50; i++) {
+  random = Math.floor(Math.random() * text.length);
+  captcha += text[random];
+  console.log(random);
+}
+console.log(captcha);
+
+let q = prompt(`${captcha}`);
+
+if (q === captcha) {
+  alert("khosh omadi");
+} else {
+  alert("qalate");
+}
+console.log(eval("ab"));
