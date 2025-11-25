@@ -349,22 +349,22 @@
 // const a = document.getElementById("title");
 // console.dir(a);
 
-// const b = document.getElementsByClassName("tit") 
+// const b = document.getElementsByClassName("tit")
 // console.log(b);
 
-const c = document.querySelectorAll(".tit")
-console.log(c); 
-let i = ""
-let q = c.forEach(function(item){
-  console.log(item);
-  
-})
+const img = document.querySelector("img");
+const btn = document.querySelector("button");
+let isOne = true;
 
+btn.addEventListener("click", function () {
+  if (isOne) {
+    img.setAttribute("src", "./bulbon.gif");
+    btn.innerHTML = "لامپ را خاموش کنید";
+    isOne = false;
+  } else {
+    img.setAttribute("src", "./bulboff.gif");
+    btn.innerHTML = "لامپ را روشن کنید ";
+    isOne = true;
+  }
+});
 
-
-const g = document.querySelector(".items")
-g.style.color = "red"
-
-
-let x = document.querySelector(".items")
-x.setAttribute("style.color" , "black")
