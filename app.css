@@ -29,6 +29,7 @@ h1{
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   font-size: 20px;
+  margin: 0;
 }
 #password {
   height: 50px;
@@ -38,6 +39,7 @@ h1{
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+  margin: 0;
 }
 
 .button{
@@ -98,4 +100,97 @@ h1{
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+}
+
+.suc{
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+.unsuc{
+  color: red;
+  font-size: 20px;
+  font-weight: bold;  
+  margin: 0;
+}
+
+.hidden{
+  display: none;
+}
+
+.umess{
+  color: red;
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+.pmess{
+  color: red;
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+.usuc{
+  color: green;
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+.psuc{
+  color: green;
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.modal-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.5); /* پشت صفحه تاریک */
+  backdrop-filter: blur(5px);     /* افکت تار شدن */
+  
+  z-index: 9999; /* همیشه روی همه چی */
+}
+
+.modal-card {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  animation: popup 0.25s ease; /* انیمیشن زیبا */
+}
+
+.modal-card img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.modal-button {
+  padding: 8px 20px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* انیمیشن */
+@keyframes popup {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
 }

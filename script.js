@@ -368,3 +368,42 @@ btn.addEventListener("click", function () {
   }
 });
 
+const username = document.querySelector(".username");
+const password = document.querySelector(".password");
+const button = document.querySelector(".button");
+const umess = document.querySelector(".umess");
+const pmess = document.querySelector(".pmess");
+const modal = document.querySelector(".modal-screen")
+const btn2 = document.querySelector(".modal-button")
+
+button.addEventListener("click", function () {
+  const user = username.value;
+  const pass = password.value;
+  if (user.length > 3) {
+    umess.classList.remove("hidden");
+    umess.classList.add("usuc");
+    umess.innerHTML = "vorod movafaq";
+  } else {
+    umess.classList.remove("hidden");
+    umess.classList.remove("usuc");
+    umess.classList.add("umess");
+    umess.innerHTML = "vorod na movafaq";
+  }
+  if (pass.length > 8) {
+    pmess.classList.remove("hidden");
+    pmess.classList.add("psuc");
+    pmess.innerHTML = "vorod movafaq";
+  } else {
+    pmess.classList.remove("hidden");
+    pmess.classList.remove("psuc");
+    pmess.classList.add("pmess");
+    pmess.innerHTML = "vorod na movafaq";
+  }
+  if (user.length > 3 && pass.length > 8 ){
+    modal.classList.remove("hidden")
+  }
+
+});
+btn2.addEventListener("click" , function(){
+  modal.classList.add("hidden")
+})
