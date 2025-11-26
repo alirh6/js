@@ -373,8 +373,8 @@ const password = document.querySelector(".password");
 const button = document.querySelector(".button");
 const umess = document.querySelector(".umess");
 const pmess = document.querySelector(".pmess");
-const modal = document.querySelector(".modal-screen")
-const btn2 = document.querySelector(".modal-button")
+const modal = document.querySelector(".modal-screen");
+const btn2 = document.querySelector(".modal-button");
 
 button.addEventListener("click", function () {
   const user = username.value;
@@ -399,11 +399,14 @@ button.addEventListener("click", function () {
     pmess.classList.add("pmess");
     pmess.innerHTML = "vorod na movafaq";
   }
-  if (user.length > 3 && pass.length > 8 ){
-    modal.classList.remove("hidden")
+  if (user.length > 3 && pass.length > 8) {
+    modal.classList.remove("hidden");
   }
-
 });
-btn2.addEventListener("click" , function(){
-  modal.classList.add("hidden")
-})
+btn2.addEventListener("click", function () {
+  modal.classList.add("hidden");
+});
+
+username.addEventListener("keyup", function () {
+  console.log(username.value);
+});
