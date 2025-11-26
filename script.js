@@ -410,3 +410,11 @@ btn2.addEventListener("click", function () {
 username.addEventListener("keyup", function () {
   console.log(username.value);
 });
+username.addEventListener("keypress" , function(){
+  console.log(username.value);
+  
+})
+username.addEventListener("keydown" , function(){
+  console.log(username.value);
+  
+})
