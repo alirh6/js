@@ -1,5 +1,7 @@
 body {
   background-color: aqua;
+  margin-bottom: 50px;
+  font-family: "poppins";
 }
 .form {
   display: flex;
@@ -16,7 +18,7 @@ body {
   -ms-border-radius: 40px;
   -o-border-radius: 40px;
 }
-h1{
+h1 {
   margin-top: 60px;
 }
 #username {
@@ -42,7 +44,7 @@ h1{
   margin: 0;
 }
 
-.button{
+.button {
   width: 87%;
   height: 60px;
   /* margin-bottom: 50px; */
@@ -57,12 +59,12 @@ h1{
   -o-border-radius: 15px;
 }
 
-.p{
+.p {
   font-size: 20px;
   font-weight: bold;
   position: relative;
 }
-.p::after{
+.p::after {
   content: "";
   width: 160px;
   height: 2px;
@@ -74,7 +76,7 @@ h1{
   left: 100px;
   margin: auto;
 }
-.p::before{
+.p::before {
   content: "";
   width: 160px;
   height: 2px;
@@ -87,7 +89,7 @@ h1{
   margin: auto;
 }
 
-.button1{
+.button1 {
   width: 87%;
   height: 60px;
   margin-bottom: 50px;
@@ -102,42 +104,42 @@ h1{
   -o-border-radius: 15px;
 }
 
-.suc{
+.suc {
   color: green;
   font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
-.unsuc{
+.unsuc {
   color: red;
   font-size: 20px;
-  font-weight: bold;  
+  font-weight: bold;
   margin: 0;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.umess{
+.umess {
   color: red;
   font-size: 20px;
   margin: 0;
   font-weight: bold;
 }
-.pmess{
+.pmess {
   color: red;
   font-size: 20px;
   margin: 0;
   font-weight: bold;
 }
-.usuc{
+.usuc {
   color: green;
   font-size: 20px;
   margin: 0;
   font-weight: bold;
 }
-.psuc{
+.psuc {
   color: green;
   font-size: 20px;
   margin: 0;
@@ -156,8 +158,8 @@ h1{
   justify-content: center;
 
   background: rgba(0, 0, 0, 0.5); /* پشت صفحه تاریک */
-  backdrop-filter: blur(5px);     /* افکت تار شدن */
-  
+  backdrop-filter: blur(5px); /* افکت تار شدن */
+
   z-index: 9999; /* همیشه روی همه چی */
 }
 
@@ -166,7 +168,7 @@ h1{
   padding: 20px 30px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   animation: popup 0.25s ease; /* انیمیشن زیبا */
 }
 
@@ -191,6 +193,175 @@ h1{
 
 /* انیمیشن */
 @keyframes popup {
-  from { transform: scale(0.7); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.wrap {
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  margin: 50px auto;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.col {
+  width: 250px;
+  height: 250px;
+  margin: 40px auto;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+}
+.btnwrap {
+  text-align: center;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.showcol,
+.showcol2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.btnn {
+  padding: 20px 30px;
+  font-size: 20px;
+  background-color: greenyellow;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.btnn2 {
+  padding: 20px 30px;
+  font-size: 20px;
+  background-color: blue;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+.select {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.inpuut{
+  width: 50px;
+  height: 30px;
+
+}
+.inpuut:checked ~ .inp{
+  display: none;
+}
+.inpuut ~ p {
+  display: none;
+  font-family: "poppins";
+  font-size: 20px;
+  font-weight: bold;
+}
+.inpuut:checked ~ p {
+  display: block;
+}
+.inpuut:focus-visible ~ p{
+  display: block;
+}
+
+.panel { display:none; }
+#t1:checked + label + .panel { display:block; }
+#t2:checked + label + .panel { display:block; }
+
+.item .body { height:0; overflow:hidden; transition:height .25s ease; }
+.item:has(.h:focus) .body,
+.item:has(.h:active) .body { height: auto; /* یا مقدار ثابت */ }
+
+.sl , .sl1 , .sl2 {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: black;
+}
+.www{
+  display: flex;
+  gap: 10px;
+}
+.sl:hover{
+  background-color: red;
+  scale: calc(1.3);
+}
+
+.sl1:active{
+  background-color: red;
+  scale: calc(1.3);
+}
+
+.sl2:focus{
+  background-color: red;
+  scale: calc(1.3);
+}
+
+.sl:has(+ .sl1:hover){
+  background-color: blue;
+}
+.sl1:has(+ .sl2:hover){
+  background-color: #4caf50;
+}
+.sl2:has(.sl1:hover){
+  background-color: aliceblue;
+}
+
+.sl:has(:hover){
+  background-color: burlywood;
+}
+
+.sl:hover + .sl1 + .sl2 {
+  background-color: yellow;
+}
+  .form:has(#checkbox:checked) .btn2 {
+    background-color: lightgreen;
+  }
+
+.www:has(.sl1:hover) .sl2{
+  rotate: 45deg;
+  background-color: blue;
+}
+
+.www:has(.sl1:hover) .sl {
+  rotate:  -45deg;
+}
+
+.form:has(.btn:hover) #checkbox{
+  rotate: 40deg;
+}
+
+.form:has(#checkbox:checked) .btn2{
+  scale: calc(2);
+  background-color: tomato;
 }

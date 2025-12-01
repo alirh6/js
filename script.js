@@ -375,6 +375,7 @@ const umess = document.querySelector(".umess");
 const pmess = document.querySelector(".pmess");
 const modal = document.querySelector(".modal-screen");
 const btn2 = document.querySelector(".modal-button");
+const keyup = document.querySelector(".keyup");
 
 button.addEventListener("click", function () {
   const user = username.value;
@@ -407,14 +408,61 @@ btn2.addEventListener("click", function () {
   modal.classList.add("hidden");
 });
 
-username.addEventListener("keyup", function () {
-  console.log(username.value);
+username.addEventListener("keyup", function (a) {
+  const usss = username.value;
+  if (usss.length < 4) {
+    keyup.innerHTML = "کمتر از 8 حرف";
+  } else {
+    keyup.innerHTML = " vorod ok shod";
+  }
 });
-username.addEventListener("keypress" , function(){
-  console.log(username.value);
+
+const btnn = document.querySelector(".btnn");
+const showcol = document.querySelector(".showcol");
+const showcol2 = document.querySelector(".showcol2");
+const col = document.querySelector(".col");
+const wrap = document.querySelector(".wrap");
+const btnn2 = document.querySelector(".btnn2");
+
+btnn.addEventListener("click", function () {
+  const red = Math.floor(Math.random() * 255);
+  const green = Math.floor(Math.random() * 255);
+  const blue = Math.floor(Math.random() * 255);
+  const red2 = Math.floor(Math.random() * 255);
+  const green2 = Math.floor(Math.random() * 255);
+  const blue2 = Math.floor(Math.random() * 255);
+  const rot = Math.floor(Math.random() * 10000);
+  showcol.innerHTML = `rgb(${red},${green},${blue})`;
+  showcol2.innerHTML = `rgb(${red2},${green2},${blue2})`;
+  showcol2.style.backgroundColor = `rgb(${blue},${red2},${blue2})`
+  col.style.backgroundColor = `rgb(${red},${green},${blue})`;
+  btnn.style.backgroundColor = `rgb(${red2},${green2},${blue2})`;
+  wrap.style.backgroundColor = `rgb(${blue2},${green2},${red})`;
+  btnn2.style.rotate = `${rot}deg`;
+  btnn2.style.backgroundColor = `rgb(${green},${blue},${red2})`
+});
+
+
+
+username.setAttribute("data-user-id" , "ali")
+
+const inp = document.querySelector(".inp")
+
+inp.addEventListener("change" , function(){
+  console.log(inp);
   
 })
-username.addEventListener("keydown" , function(){
-  console.log(username.value);
+
+
+
+const inpuut = document.querySelector(".inpuut")
+inpuut.addEventListener("change" , function(){
+  let a = inpuut.checked
+  console.log(a);
+  
+})
+
+const select = document.querySelector(".select")
+select.addEventListener("change" , function(){
   
 })
