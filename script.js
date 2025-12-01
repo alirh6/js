@@ -464,5 +464,30 @@ inpuut.addEventListener("change" , function(){
 
 const select = document.querySelector(".select")
 select.addEventListener("change" , function(){
+  console.log(select.value);
   
+})
+
+
+let cities = {
+  tehran : ["rey" , "qods" , "rodehen"],
+  fars : ["abadeh" , "shiraz" , "lar"],
+  khorasan : ["mashhad" , "sabzevar" , "gonabad"]
+  ,yazd : ["yazd" , "mehrabad" , "mehriz"]
+}
+
+let provines = Object.keys(cities)
+let option;
+provines.forEach(function(privince){
+  option = document.createElement("option")
+  option.className = "opt"
+  option.value = privince
+  option.textContent = privince
+  select.append(option)
+})
+let cityselect = document.querySelector(".cityselect")
+select.addEventListener("change" , function(){
+  const pro = select.value
+  let procit = cities[pro]
+  procit
 })
