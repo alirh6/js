@@ -491,3 +491,20 @@ provinces.addEventListener("change", function () {
   });
 });
 provinces.dispatchEvent(new Event("change"));
+
+const inp1 = document.querySelector(".inp1");
+const inp2 = document.querySelector(".inp2");
+const bu1 = document.querySelector(".bu1");
+const bu2 = document.querySelector(".bu2");
+
+bu2.addEventListener("click", function () {
+  let a = +inp1.value;
+  a = a * 9.5 + 32;
+  inp2.value = a;
+
+  inp2.append(a);
+});
+bu1.addEventListener("click", function () {
+  inp1.value = ""
+  inp2.value = "";
+});
