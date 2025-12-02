@@ -434,60 +434,60 @@ btnn.addEventListener("click", function () {
   const rot = Math.floor(Math.random() * 10000);
   showcol.innerHTML = `rgb(${red},${green},${blue})`;
   showcol2.innerHTML = `rgb(${red2},${green2},${blue2})`;
-  showcol2.style.backgroundColor = `rgb(${blue},${red2},${blue2})`
+  showcol2.style.backgroundColor = `rgb(${blue},${red2},${blue2})`;
   col.style.backgroundColor = `rgb(${red},${green},${blue})`;
   btnn.style.backgroundColor = `rgb(${red2},${green2},${blue2})`;
   wrap.style.backgroundColor = `rgb(${blue2},${green2},${red})`;
   btnn2.style.rotate = `${rot}deg`;
-  btnn2.style.backgroundColor = `rgb(${green},${blue},${red2})`
+  btnn2.style.backgroundColor = `rgb(${green},${blue},${red2})`;
 });
 
+username.setAttribute("data-user-id", "ali");
 
+const inp = document.querySelector(".inp");
 
-username.setAttribute("data-user-id" , "ali")
-
-const inp = document.querySelector(".inp")
-
-inp.addEventListener("change" , function(){
+inp.addEventListener("change", function () {
   console.log(inp);
-  
-})
+});
 
-
-
-const inpuut = document.querySelector(".inpuut")
-inpuut.addEventListener("change" , function(){
-  let a = inpuut.checked
+const inpuut = document.querySelector(".inpuut");
+inpuut.addEventListener("change", function () {
+  let a = inpuut.checked;
   console.log(a);
-  
-})
-
-const select = document.querySelector(".select")
-select.addEventListener("change" , function(){
-  console.log(select.value);
-  
-})
-
+});
 
 let cities = {
-  tehran : ["rey" , "qods" , "rodehen"],
-  fars : ["abadeh" , "shiraz" , "lar"],
-  khorasan : ["mashhad" , "sabzevar" , "gonabad"]
-  ,yazd : ["yazd" , "mehrabad" , "mehriz"]
-}
+  tehran: ["rey", "qods", "rodehen"],
+  fars: ["abadeh", "shiraz", "lar"],
+  khorasan: ["mashhad", "sabzevar", "gonabad"],
+  yazd: ["yazd", "mehrabad", "mehriz"],
+};
 
-let provines = Object.keys(cities)
-let option;
-provines.forEach(function(privince){
-  option = document.createElement("option")
-  option.className = "opt"
-  option.value = privince
-  option.textContent = privince
-  select.append(option)
-})
-let cityselect = document.querySelector(".cityselect")
-select.addEventListener("change" , function(){
-  const pro = select.value
-  let procit = cities[pro]
-  procit
-})
+let keyprovince = Object.keys(cities);
+let newOption;
+const provinces = document.querySelector(".provinces");
+const citiess = document.querySelector(".cities");
+
+keyprovince.forEach(function (key) {
+  newOption = document.createElement("option");
+  newOption.className = "optin";
+  newOption.value = key;
+  newOption.innerHTML = key;
+  provinces.append(newOption);
+});
+
+provinces.addEventListener("change", function () {
+  const ostan = provinces.value;
+
+  let cit = cities[ostan];
+  let newCityOption;
+  citiess.innerHTML = "";
+  cit.forEach(function (city) {
+    newCityOption = document.createElement("option");
+    newCityOption.className = "cityoption";
+    newCityOption.value = city;
+    newCityOption.innerHTML = city;
+    citiess.append(newCityOption);
+  });
+});
+provinces.dispatchEvent(new Event("change"));
