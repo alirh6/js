@@ -463,35 +463,6 @@ let cities = {
   yazd: ["yazd", "mehrabad", "mehriz"],
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // let keyprovince = Object.keys(cities);
 let newOption;
 const provinces = document.querySelector(".provinces");
@@ -525,52 +496,89 @@ const inp1 = document.querySelector(".inp1");
 const inp2 = document.querySelector(".inp2");
 const bu1 = document.querySelector(".bu1");
 const bu2 = document.querySelector(".bu2");
-const nat = document.querySelector(".nat")
+const nat = document.querySelector(".nat");
 
 bu2.addEventListener("click", function () {
   let a = +inp1.value;
-  if (isNaN(a)){
-    nat.innerHTML = "faqat adad bzn dg jojo"
 
-  }else{
+  if (isNaN(a)) {
+    nat.innerHTML = "adad dg refiq jnm";
+  } else {
     a = a * 1.8 + 32;
-  inp2.value = a;
-  nat.innerHTML  = "natije"
-  inp2.append(a);
+    inp2.value = a;
   }
 });
+
 bu1.addEventListener("click", function () {
-  inp1.value = ""
+  inp1.value = "";
   inp2.value = "";
-  nat.innerHTML = "chi konim refiq"
+  nat.innerHTML = "chi konim jojo";
 });
 
+// bu2.addEventListener("click", function () {
+//   let a = +inp1.value;
+//   if (isNaN(a)){
+//     nat.innerHTML = "faqat adad bzn dg jojo"
 
+//   }else{
+//     a = a * 1.8 + 32;
+//   inp2.value = a;
+//   nat.innerHTML  = "natije"
+//   inp2.append(a);
+//   }
+// });
+// bu1.addEventListener("click", function () {
+//   inp1.value = ""
+//   inp2.value = "";
+//   nat.innerHTML = "chi konim refiq"
+// });
 
-let p = Object.keys(cities)
+let p = Object.keys(cities);
 
-let oc ;
+let oc;
 
-p.forEach(function(key){
-  oc = document.createElement("option")
-  oc.className = "salam"
-  oc.value = key
-  oc.innerHTML = key
-  provinces.append(oc)
-})
+p.forEach(function (key) {
+  oc = document.createElement("option");
+  oc.className = "salam";
+  oc.value = key;
+  oc.innerHTML = key;
+  provinces.append(oc);
+});
 
-provinces.addEventListener("change" , function(){
-  let c = provinces.value
-  let cc = cities[c]
+provinces.addEventListener("change", function () {
+  let c = provinces.value;
+  let cc = cities[c];
 
-  citiess.innerHTML = "" ;
+  citiess.innerHTML = "";
   let pp;
-  cc.forEach(function(key){
-    pp = document.createElement("option")
-    pp.className = "refiq"
-    pp.value = key
-    pp.innerHTML = key
-    citiess.append(pp)
-  })
-  
-})
+  cc.forEach(function (key) {
+    pp = document.createElement("option");
+    pp.className = "refiq";
+    pp.value = key;
+    pp.innerHTML = key;
+    citiess.append(pp);
+  });
+});
+
+const in1 = document.querySelector(".in1");
+const in2 = document.querySelector(".in2");
+const in3 = document.querySelector(".in3");
+const shahr = document.querySelector(".shahr");
+const hum = document.querySelector(".hum");
+const hava = document.querySelector(".hava");
+
+const data = {
+  tehran: { temp: 21, hum: 25, country: "iran" },
+  shiraz: { temp: 22, hum: 26, country: "iran" },
+  gorgan: { temp: 23, hum: 27, country: "iran" },
+  yazd: { temp: 24, hum: 28, country: "iran" },
+};
+
+in3.addEventListener("click", function () {
+  let a = in2.value;
+  const weather = data[a];
+
+  shahr.innerHTML = `${a},${weather.country}`;
+  hum.innerHTML = `${a},${weather.hum}`;
+  hava.innerHTML = `${a},${weather.temp}`;
+});
