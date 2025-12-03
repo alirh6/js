@@ -463,48 +463,114 @@ let cities = {
   yazd: ["yazd", "mehrabad", "mehriz"],
 };
 
-let keyprovince = Object.keys(cities);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let keyprovince = Object.keys(cities);
 let newOption;
 const provinces = document.querySelector(".provinces");
 const citiess = document.querySelector(".cities");
 
-keyprovince.forEach(function (key) {
-  newOption = document.createElement("option");
-  newOption.className = "optin";
-  newOption.value = key;
-  newOption.innerHTML = key;
-  provinces.append(newOption);
-});
+// keyprovince.forEach(function (key) {
+//   newOption = document.createElement("option");
+//   newOption.className = "optin";
+//   newOption.value = key;
+//   newOption.innerHTML = key;
+//   provinces.append(newOption);
+// });
 
-provinces.addEventListener("change", function () {
-  const ostan = provinces.value;
+// provinces.addEventListener("change", function () {
+//   const ostan = provinces.value;
 
-  let cit = cities[ostan];
-  let newCityOption;
-  citiess.innerHTML = "";
-  cit.forEach(function (city) {
-    newCityOption = document.createElement("option");
-    newCityOption.className = "cityoption";
-    newCityOption.value = city;
-    newCityOption.innerHTML = city;
-    citiess.append(newCityOption);
-  });
-});
-provinces.dispatchEvent(new Event("change"));
+//   let cit = cities[ostan];
+//   let newCityOption;
+//   citiess.innerHTML = "";
+//   cit.forEach(function (city) {
+//     newCityOption = document.createElement("option");
+//     newCityOption.className = "cityoption";
+//     newCityOption.value = city;
+//     newCityOption.innerHTML = city;
+//     citiess.append(newCityOption);
+//   });
+// });
+// provinces.dispatchEvent(new Event("change"));
 
 const inp1 = document.querySelector(".inp1");
 const inp2 = document.querySelector(".inp2");
 const bu1 = document.querySelector(".bu1");
 const bu2 = document.querySelector(".bu2");
+const nat = document.querySelector(".nat")
 
 bu2.addEventListener("click", function () {
   let a = +inp1.value;
-  a = a * 9.5 + 32;
-  inp2.value = a;
+  if (isNaN(a)){
+    nat.innerHTML = "faqat adad bzn dg jojo"
 
+  }else{
+    a = a * 1.8 + 32;
+  inp2.value = a;
+  nat.innerHTML  = "natije"
   inp2.append(a);
+  }
 });
 bu1.addEventListener("click", function () {
   inp1.value = ""
   inp2.value = "";
+  nat.innerHTML = "chi konim refiq"
 });
+
+
+
+let p = Object.keys(cities)
+
+let oc ;
+
+p.forEach(function(key){
+  oc = document.createElement("option")
+  oc.className = "salam"
+  oc.value = key
+  oc.innerHTML = key
+  provinces.append(oc)
+})
+
+provinces.addEventListener("change" , function(){
+  let c = provinces.value
+  let cc = cities[c]
+
+  citiess.innerHTML = "" ;
+  let pp;
+  cc.forEach(function(key){
+    pp = document.createElement("option")
+    pp.className = "refiq"
+    pp.value = key
+    pp.innerHTML = key
+    citiess.append(pp)
+  })
+  
+})

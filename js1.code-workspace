@@ -1,13 +1,14 @@
 {
   "folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "../Project2"
-	}
-],
+    {
+      "path": "."
+    },
+    {
+      "path": "../Project2"
+    }
+  ],
   "settings": {
-    "liveServer.settings.multiRootWorkspaceName": "js1"
+    "liveServer.settings.multiRootWorkspaceName": "js1",
+    "liveServer.settings.port": 5502
   }
 }
