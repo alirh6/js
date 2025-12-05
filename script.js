@@ -582,3 +582,46 @@ in3.addEventListener("click", function () {
   hum.innerHTML = `${a},${weather.hum}`;
   hava.innerHTML = `${a},${weather.temp}`;
 });
+
+const koli = document.querySelector(".koli")
+
+in3.addEventListener("click" , function(e){
+  in2.style = ""
+  koli.classList.toggle("hidden")
+  console.log(e.clientX , e.clientY ,
+    e.screenX , 
+    e.screenY,
+    e.pageX,
+    e.pageY,
+    e.offsetX,
+    e.offsetY,
+    e.target
+    
+
+  );
+  
+})
+// let q = console.log(koli.style);
+
+const sub1 = document.querySelector(".sub")
+sub1.addEventListener("submit" , function(e){
+  console.log(e.target);
+  
+})
+
+document.querySelector(".em").addEventListener("keyup" , 
+  function(event){
+    let e = event.target.className
+    console.log(e);
+    
+    console.log(
+      event.target,
+      event.type,
+      event , 
+      event.key
+    
+    );
+    
+  }
+)
+
